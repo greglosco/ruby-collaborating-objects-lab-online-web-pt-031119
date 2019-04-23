@@ -25,9 +25,7 @@ class Artist
     if @@all.find {|artist| artist.name == name}
        @@all.find {|artist| artist.name == name}
     else
-       new_artist = self.new(name)
-       new_artist.save
-       new_artist
+       self.create(name)
     end
   end
   
